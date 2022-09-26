@@ -1,7 +1,8 @@
 import React from 'react';
-import Form from './Form';
-import Dropdow from './Dropdow';
-import Sections from './Sections';
+import Form from '../layouts/Form';
+import Dropdow from '../layouts/Dropdow';
+import Sections from '../layouts/Sections';
+import CartWidget from '../layouts/CartWidget';
 const Navbar = () => {
     const listDropdow = ["Hombre", "Mujer", "Unisex", "Niños"];
         return (
@@ -14,6 +15,7 @@ const Navbar = () => {
                                 <Dropdow lista={listDropdow}/>
                             </ul>
                             <Form busqueda = "Buscar Producto"/>
+                            <CartWidget/>
                         </div>
                     </div>
                 </nav>

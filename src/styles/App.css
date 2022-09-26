@@ -1,0 +1,23 @@
+.divGeneral1 {
+    background-color: aquamarine;
+    color: black;
+}
+
+.dropdown-item:hover{
+    background-color: #ffce67;
+    color: black;
+}
+
+.cardProductos{
+    width: 18rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    justify-content: center;
+    margin: 20px auto ;
+}
+
+.card-body{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+}
