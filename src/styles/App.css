@@ -12,7 +12,6 @@ body{
 
 .navbar{
     background-color: #9381ff;
-    display: block;
     width: 100vw;
 }
 
@@ -52,10 +51,9 @@ a{
 .btnCategories{
     background-color: white;
     padding: 18px 20px;
-    border-bottom: 2px solid #ffff;
+    border-bottom: 1px solid #ffff;
     color: #9381ff;
     display: flex;
-    display: none;
 }
 
 .btnCategories:hover{
@@ -76,6 +74,7 @@ a{
 .dropdown-menu{
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 
@@ -142,3 +141,5 @@ a{
 .form-control:focus{
     box-shadow: none;
 }
+
+

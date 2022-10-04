@@ -11,7 +11,7 @@ const Home = () => {
 
                 <div className="card" key={producto.id} style={{ width: '18rem' }}>
                     <img src={"./img/" + producto.img} className="card-img-top" alt={producto.nombre} />
-                    <div className="card-body">
+                    <div className="card-body" key={producto.id}>
                         <p className="card-text cardName">{producto.nombre}</p>
                         <h5 className="card-title">{producto.marca}</h5>
                         <p className="card-text">{producto.modelo}</p>
