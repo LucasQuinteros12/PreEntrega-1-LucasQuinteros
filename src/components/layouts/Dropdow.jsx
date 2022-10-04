@@ -1,16 +1,19 @@
 import React from 'react';
-
-const Dropdow = ({lista}) => {
+import { RiArrowDropDownLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+const Dropdow = ({ lista }) => {
     return (
         <>
             <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-                <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">{lista[0]}</a>
-                    <a className="dropdown-item" href="#">{lista[1]}</a>
-                    <a className="dropdown-item" href="#">{lista[2]}</a>
-                    <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">{lista[3]}</a>
+                <a className="nav-link" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <button className='btnSections'>
+                        <RiArrowDropDownLine size={35} className='icons' />
+                    </button>
+                </a>
+                <div className="dropdown">
+                    <button className='dropdown-item btn btn1'><Link className='btnCategories' to={`/categoria/1`}>{lista[0]}</Link></button>
+                    <button className='dropdown-item btn'><Link className='btnCategories' to={`/categoria/2`}>{lista[1]}</Link></button>
+                    <button className='dropdown-item btn'><Link className='btnCategories' to={`/categoria/3`}>{lista[2]}</Link></button>
                 </div>
             </li>
         </>

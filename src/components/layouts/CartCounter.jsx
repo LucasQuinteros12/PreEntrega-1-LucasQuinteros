@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const CartCounter = () => {
-    const [cartCounter, setcartCounter] = useState(0);
+    const [cartCounter, setcartCounter] = useState(1);
     function addCartCounter(operation){
        if(operation === '+'){
            setcartCounter(cartCounter + 1);
        }else{
-            if(cartCounter > 0){
+            if(cartCounter > 1){
                 setcartCounter(cartCounter - 1);
             }
        }

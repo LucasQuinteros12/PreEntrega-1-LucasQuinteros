@@ -1,23 +1,144 @@
-.divGeneral1 {
-    background-color: aquamarine;
-    color: black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.dropdown-item:hover{
-    background-color: #ffce67;
-    color: black;
+body{
+    background-color: #b8b8ff;
 }
 
-.cardProductos{
-    width: 18rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
-    justify-content: center;
-    margin: 20px auto ;
+/* NavBar */
+
+.navbar{
+    background-color: #9381ff;
+    display: block;
+    width: 100vw;
+}
+
+
+.firstUl{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.secondUl{
+    display: flex;
+    align-items: center;
+}
+
+.divContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+.icons{
+    color: #9381ff;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+
+.btnCategories{
+    background-color: white;
+    padding: 18px 20px;
+    border-bottom: 2px solid #ffff;
+    color: #9381ff;
+    display: flex;
+    display: none;
+}
+
+.btnCategories:hover{
+    background-color: #9381ff;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn{
+    border: none;
+}
+
+.btn1{
+    margin-top: 14px;
+}
+
+
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btnSections{
+    background-color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Home */
+
+.card{
+    margin: 10px auto;
+    padding: 20px;
+    background: #9381ff;
+    border: none;
+}
+
+.btnVerProducto{
+    border: none;
+    background-color: #b8b8ff;
+    padding: 10px 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.btnVerProducto:hover{
+    background-color: white;
+    color: #9381ff;
+    transition: all 0.3s;
 }
 
 .card-body{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    color: #ffff;
+}
 
+
+.cardName{
+    text-align: start;
+    font-weight: lighter;
+    color: black;
+}
+
+/* Form */
+
+.btnBuscar{
+    background-color: #ffff;
+    padding: 10px 12px;
+    color: #9381ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.form-control:focus{
+    box-shadow: none;
 }
