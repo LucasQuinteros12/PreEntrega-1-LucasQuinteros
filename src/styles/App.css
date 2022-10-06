@@ -126,6 +126,11 @@ a{
     font-weight: lighter;
     color: black;
 }
+.Row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
 
 /* Form */
 
@@ -141,5 +146,4 @@ a{
 .form-control:focus{
     box-shadow: none;
 }
-
 

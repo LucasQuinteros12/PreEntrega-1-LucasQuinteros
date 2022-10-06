@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { consultarBDD } from '../../utils/FuncionesUtiles';
 import ProductDetails from './ItemDetailContainer';
 
 const Product = () => {
@@ -7,12 +8,11 @@ const Product = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch('../json/productos.json')
-            .then(response => response.json())
-            .then(productos => {
-                const producto1 = productos.find(productoArray => productoArray.id === parseInt(id));
+        consultarBDD('../json/productos.json').then(productos => {
+            const producto1 = productos.find(productoArray => productoArray.id === parseInt(id));
                 setProducto(producto1);
-            })
+        })
+
     }, []);
 
     return (

@@ -5,7 +5,7 @@ import Sections from '../layouts/Sections';
 import CartWidget from '../layouts/CartWidget';
 import '../../styles/App.css';
 const Navbar = () => {
-    const listDropdow = ["Celulares", "Notebooks", "Televisores"];
+    const listDropdow = ["Notebooks", "Celulares", "Televisores"];
     return (
         <>
            <nav className="navbar navbar-expand-lg">

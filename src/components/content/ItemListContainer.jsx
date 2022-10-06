@@ -5,7 +5,7 @@ const Home = () => {
     const [producto, setProductos] = useState([])
 
     useEffect(() => {
-        consultarBDD().then(productos => {
+        consultarBDD('./json/productos.json').then(productos => {
 
             const cardProducto = productos.map(producto =>
 
@@ -28,7 +28,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='row'>
+        <div className='Row'>
             {producto}
         </div>
     );
