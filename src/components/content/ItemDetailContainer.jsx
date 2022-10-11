@@ -1,10 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CarritoContext } from '../../context/CarritoContext';
 const ProductDetails = ({ producto }) => {
     const [cantidad, setCantidad] = useState(1);
-    const carrito = []
 
-    function cantProducto(operation) {
+    const {carrito, agregarProducto, quitarProducto} = useContext(CarritoContext);
+
+    const cantProducto = (operation) => {
         if (operation === '+') {
             if (cantidad < producto.stock) {
                 setCantidad(cantidad + 1);
@@ -16,17 +18,6 @@ const ProductDetails = ({ producto }) => {
         }
     }
 
-    const agregarAlCarrito = (prod, cant) => {
-        let indice = carrito.findIndex(producto => producto.id === prod.id);
-        const prodCarrito = {id: prod.id, cantidad: cant}
-
-        if (indice !== -1) {
-            carrito[indice] = prodCarrito;
-        }else{
-            carrito.push(prodCarrito);
-        }
-        console.log(carrito);
-    }
 
     
     return (
@@ -45,7 +36,7 @@ const ProductDetails = ({ producto }) => {
                         <button className='btn btnVerProducto' onClick={() => cantProducto("+")}>+</button>
                         <p className='card-text'>{cantidad}</p>
                         <button className='btn btnVerProducto' onClick={() => cantProducto("-")}>-</button>
-                        <button className='btn btnVerProducto' onClick={() => agregarAlCarrito(producto, cantidad)}>Comprar Producto</button>
+                        <button className='btn btnVerProducto' onClick={() => agregarProducto(producto, cantidad)}>Comprar Producto</button>
                     </div>
                 </div>
             </div>

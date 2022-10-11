@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { consultarBDD } from '../../utils/FuncionesUtiles';
+import { DarkModeContext } from '../../context/darkModeContext';
 import { Link } from 'react-router-dom';
 const Home = () => {
     const [producto, setProductos] = useState([])
+
+    const {darkMode, toggleDarkMode} = useContext(DarkModeContext);
 
     useEffect(() => {
         consultarBDD('./json/productos.json').then(productos => {
@@ -27,8 +30,9 @@ const Home = () => {
         })
     }, []);
 
+
     return (
-        <div className='Row'>
+        <div className={darkMode ? 'darkMode row' : 'row' }>
             {producto}
         </div>
     );

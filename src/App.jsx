@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
+import { DarkModeProvider } from './context/darkModeContext';
 import Navbar from './components/content/Navbar';
 import Home from './components/content/ItemListContainer';
 import Cart from './components/content/Cart';
@@ -14,19 +15,22 @@ import Categoria from './components/content/Categoria';
 const App = () => {
     return (
         <>
-            <BrowserRouter>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/producto/:id" element={<Product/>}/>
-                    <Route path="/categoria/:id" element={<Categoria/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/contacto" element={<Contact/>}/>
-                    <Route path="/carrito" element={<Cart/>}/>
+            <DarkModeProvider>
+                <BrowserRouter>
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/producto/:id" element={<Product />} />
+                        <Route path="/categoria/:id" element={<Categoria />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contacto" element={<Contact />} />
+                        <Route path="/carrito" element={<Cart />} />
 
-                </Routes>
-                <Footer/>
-            </BrowserRouter>
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </DarkModeProvider>
+
         </>
     );
 }
