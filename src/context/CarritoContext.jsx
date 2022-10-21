@@ -13,10 +13,10 @@ const CarritoProvider = (props) => {
         if (indice !== -1) {
             aux[indice].cantidad = cant;
         }else{
-            const prodCarrito = {id: prod.id, cantidad: cant}
+            const prodCarrito = {...prod, cantidad: cant}
             aux.push(prodCarrito);
         }
-        setCarrito(aux);
+        setCarrito([...aux]);
         console.log(carrito);
     }
 
@@ -25,15 +25,19 @@ const CarritoProvider = (props) => {
         let indice = aux.findIndex(producto => producto.id === prod.id);
 
         aux.splice(indice, 1);
-        setCarrito(aux)
+        setCarrito([...aux]);
         console.log(carrito);
+    }
+
+    const vaciarCarrito = () => {
+        setCarrito([]);
     }
 
     return (
         <>
-            <CarritoContext.provider value={{carrito, agregarProducto, quitarProducto}}>
+            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, vaciarCarrito}}>
                 {props.children}
-            </CarritoContext.provider>
+            </CarritoContext.Provider>
         </>
     );
 }

@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { CarritoProvider } from './context/CarritoContext';
-import './styles/index.css';
 import App from './App';
-
+import { CarritoProvider } from './context/CarritoContext';
+import { FavoritosProvider } from './context/FavContext';
+import './styles/index.css';
+import './utils/pruebas.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    
-    <CarritoProvider>
-        <App />
-    </CarritoProvider>
+    <FavoritosProvider>
+        <CarritoProvider>
+            <App />
+        </CarritoProvider>
+    </FavoritosProvider>
 );

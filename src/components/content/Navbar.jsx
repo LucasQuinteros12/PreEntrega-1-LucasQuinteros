@@ -19,7 +19,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto">
               <Sections />
               <Dropdow lista={listDropdow} />
-              <button onClick={() => toggleDarkMode()}>Dark Mode</button>
+              <button className='btnSections'  onClick={() => toggleDarkMode()}>Dark Mode</button>
             </ul>
 
           </div>

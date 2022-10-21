@@ -1,6 +1,6 @@
-import React from 'react';
+import React ,{memo} from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaTshirt, FaInfo } from 'react-icons/fa';
+import { FaHome, FaTshirt, FaInfo, FaHeart } from 'react-icons/fa';
 import { GoMail } from 'react-icons/go';
 const Sections = () => {
     return (
@@ -35,8 +35,15 @@ const Sections = () => {
                     </button>
                 </Link>
             </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/favoritos">
+                    <button className='btnSections'>
+                        <FaHeart size={25} className='icons' />
+                    </button>
+                </Link>
+            </li>
         </>
     );
 }
 
-export default Sections;
+export default memo(Sections);

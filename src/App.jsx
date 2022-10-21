@@ -10,6 +10,7 @@ import Contact from './components/content/Contact';
 import Product from './components/content/ItemList';
 import Footer from './components/content/Footer';
 import Categoria from './components/content/Categoria';
+import Fav from './components/content/Fav';
 
 
 const App = () => {
@@ -20,12 +21,13 @@ const App = () => {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/producto/:id" element={<Product />} />
-                        <Route path="/categoria/:id" element={<Categoria />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contacto" element={<Contact />} />
-                        <Route path="/carrito" element={<Cart />} />
-
+                        <Route path="/producto/:id" element={<Product />}/>
+                        <Route path="/categoria/:id" element={<Categoria />}/>
+                        <Route path="/about" element={<About />}/>
+                        <Route path="/contacto" element={<Contact />}/>
+                        <Route path="/carrito" element={<Cart />}/>
+                        <Route path="/favoritos" element={<Fav />}/>
+                        <Route path="*" element={<h1> Error 404 </h1>}/>
                     </Routes>
                     <Footer />
                 </BrowserRouter>
