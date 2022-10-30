@@ -14,6 +14,7 @@ const FavoritosProvider = (props) => {
            const prodFav = {...prod}
            aux.push(prodFav);
         }
+        setFavoritos([...aux]);
     }
 
     const quitarFavorito = (prod) =>{

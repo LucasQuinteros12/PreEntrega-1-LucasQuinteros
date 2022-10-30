@@ -10,43 +10,227 @@ body {
     transition: all 1s ease-out;
 }
 
-.darkMode{
-    background-color: black;
-    color: #ffff;
+/* DarkMode */
 
+.darkMode {
+    background-color: grey;
+    color: #ffff;
+    transition: all 0.2s ease-in;
+    margin-bottom: -3rem;
+}
+
+.navDark{
+    height: 60px;
+    background-color: gray;
+    width: 100vw;
+    transition: all 0.2s ease-in;
+}
+
+
+.iconsDark{
+    color: #ffff;
+    cursor: pointer;
+    margin: 0 12px;
+    transition: all 0.2s ease-in;
+}
+
+.btnSectionsDark{
+    background-color: black;
+    padding: 10px 2px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.rightDark{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.btnCategoriesDark{
+    background-color: black;
+    padding: 18px 20px;
+    border-bottom: 1px solid #ffff;
+    color: white;
+    display: flex;
+}
+
+.btnCategoriesDark:hover{
+    background-color: black;
+    
+}
+
+.cardContainerDark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.cardNameDark{
+    text-align: start;
+    font-weight: lighter;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btnVerProductoDark{
+    border: none;
+    background-color: gray;
+    padding: 10px 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btnVerProductoDark:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.2s ease-in;
+}
+
+.cardDark{
+    background-color:gray;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: -3rem;
+    border: none;
+    border-radius: 0px;
+    transition: all .2s ease-in;
+}
+
+.footerDark{
+    margin-top: 3em;
+    width: 100vw;
+    box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    background-color: gray;
+}
+
+.cardDarkHome{
+    margin: 10px auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+}
+
+.cardCartDark{
+    margin: 10px auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+    height: 500px;
+}
+
+.cartDark{
+    height: 100vh;
+}
+
+.btnVaciarCarritoDark {
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 20px 12px;
+    border-radius: 0 0 0 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.calcularTotalDark{
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+.contactContainerDark{
+    background-color: grey;
+    color: #ffff;
+    transition: all 0.2s ease-in;
+    margin-top: -4em;
+    margin-bottom: 10.4rem;
+}
+
+.containerFormDark{
+    margin-top: 4em;
+    margin-bottom: -10.4em;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    width: 600px;
+    border-radius: 20px;
+    border: none;
 }
 
 /* NavBar */
 
-.navbar {
+
+.navBar {
+    height: 60px;
     background-color: #9381ff;
     width: 100vw;
-    box-shadow: 0px -10px 113px 0px rgba(0, 0, 0, 0.76);
-    -webkit-box-shadow: 0px -10px 113px 0px rgba(0, 0, 0, 0.76);
-    -moz-box-shadow: 0px -10px 113px 0px rgba(0, 0, 0, 0.76);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: nowrap
+}
+
+.left {
+    flex: 1;
+    display: flex;
 }
 
 
-.firstUl {
+.title {
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.right {
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
+
 
 li {
     list-style: none;
-    margin: 0 15px;
 }
 
-.secondUl {
-    display: flex;
-    align-items: center;
-}
-
-.divContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 a {
     text-decoration: none;
@@ -77,8 +261,10 @@ a {
     border: none;
 }
 
-.btn1 {
-    margin-top: 14px;
+
+
+.fas:hover{
+    color: white;
 }
 
 
@@ -91,30 +277,22 @@ a {
 
 .btnSections {
     background-color: white;
-    padding: 10px 12px;
+    padding: 10px 2px;
     border-radius: 10px;
-    color: white;
     border: none;
     margin-left: 10px;
-    margin-right: 10px;
 }
 
 
 /* Home */
 
-.card {
+.cardHome{
     margin: 10px auto;
     margin-top: 5em;
     padding: 20px;
     border: none;
     background: #9381ff;
     border-radius: 20px;
-    box-shadow: 21px 21px 33px #b3b3b3,
-        -21px -21px 33px #ffffff;
-}
-
-img{
-    border-radius: 10px;
 }
 
 .btnVerProducto {
@@ -133,12 +311,36 @@ img{
     color: #9381ff;
     transition: all 0.3s;
 }
+.Row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+/* detalle producto */
 
 .card-body {
+    font-size: 15px;
     text-align: center;
     color: #ffff;
 }
 
+.card{
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: -3rem;
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: #9381ff;
+    border-radius: 20px;
+}
 
 .cardName {
     text-align: start;
@@ -146,33 +348,148 @@ img{
     color: black;
 }
 
-.Row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+img {
+    border-radius: 10px;
+}
 
+.imgCardDetail{
+    width: 300px;
+    height: 300px;
+    
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+
+.counterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.counter{
+    margin: 20px;
+}
+
+
+
+/* carrito */
+
+.btnCarritoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -48px;
+}
+
+.btnVaciarCarrito {
+    background-color: #9381ff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 20px 12px;
+    border-radius: 0 0 0 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.btnVaciarCarrito:hover {
+    background-color: white;
+    color: #9381ff;
+    transition: all 0.3s;
+}
+
+.calcularTotal {
+    background-color: #9381ff;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+h5 {
+    font-weight: 600;
+    color: white;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+.cartVacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100vh;
+}
+
+.cart{
+    margin-bottom: 110px;
+}
+
+.terminarCompra{
+    background-color: #9381ff;
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    padding: 20px 12px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.terminarCompra:hover{
+    background-color: white;
+    color: #9381ff;
+    transition: all 0.3s;
 }
 
 /* Form */
 
-.btnBuscar {
-    background-color: #ffff;
-    padding: 10px 12px;
-    color: #9381ff;
+.containerForm{
+    margin-top: 4em;
+    margin-bottom: 5em;
+    height: 100%;
+    background-color: #9381ff;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    width: 600px;
+    border-radius: 20px;
     border: none;
-    border-radius: 10px;
-    font-weight: 600;
 }
 
-.form-control:focus {
-    box-shadow: none;
+.text-area{
+    border: none;
+    outline: none;
+}
+
+.contactContainer{
+    height: 100%;
 }
 
 /* Footer */
 
 footer {
     margin-top: 3em;
+    width: 100vw;
     box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
     -webkit-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
     -moz-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
     background-color: #9381ff;
+}
+
+.succesContainer{
+    height: 100vh;
 }

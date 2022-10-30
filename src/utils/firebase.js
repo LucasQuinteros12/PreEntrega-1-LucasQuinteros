@@ -34,13 +34,15 @@ const cargarDB = async () => {
 
 const getProducto = async (id) => {
   const producto = await getDoc(doc(db, "productos", id));
-  const prod = [producto.id, producto.data()];
+  const prod = {id, ...producto.data()};
   return prod
 }
 
 const getProductos = async () => {
   const productos = await getDocs(collection(db, "productos"));
-  const items = productos.docs.map(producto => [producto.id, producto.data()]);
+  const items = productos.docs.map(producto => {
+    return {id: producto.id, ...producto.data()}
+  });
   return items;
 }
 
@@ -67,14 +69,13 @@ const createProducto = async (objProd) => {
 }
 
 
-const createOrdenDeCompra = async (preTotal, nombre, apellido, email, dni, direccion) => {
+const createOrdenDeCompra = async (nombre, apellido, email, dni, direccion) => {
   const ordenCompra = await addDoc(collection(db, "ordenCompra"), {
     nombre: nombre,
     apellido: apellido,
     email: email,
     dni: dni,
     direccion,
-    precioTotal: preTotal,
   })
 
   return ordenCompra

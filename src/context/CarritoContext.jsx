@@ -17,7 +17,6 @@ const CarritoProvider = (props) => {
             aux.push(prodCarrito);
         }
         setCarrito([...aux]);
-        console.log(carrito);
     }
 
     const quitarProducto = (prod) =>{
@@ -26,12 +25,13 @@ const CarritoProvider = (props) => {
 
         aux.splice(indice, 1);
         setCarrito([...aux]);
-        console.log(carrito);
     }
 
     const vaciarCarrito = () => {
         setCarrito([]);
     }
+
+    
 
     return (
         <>

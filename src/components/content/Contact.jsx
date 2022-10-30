@@ -1,6 +1,7 @@
-import React from 'react';
-
+import React ,{useContext}from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 const Contact = () => {
+    const {darkMode} = useContext(DarkModeContext);
 
     const datosFormulario = React.useRef();
 
@@ -14,8 +15,8 @@ const Contact = () => {
 
     return (
 
-        <>
-            <div className="container">
+        <div className={darkMode ? 'contactContainerDark' : 'contactContainer'}>
+            <div className={darkMode ? "container containerFormDark" : "container containerForm"}>
                 <form onSubmit={consultarForm} ref={datosFormulario} >
                     <div className="mb-4">
                         <label htmlFor="nombre" className="form-label">Nombre</label>
@@ -26,13 +27,13 @@ const Contact = () => {
                         <input type="email" className="form-control" name="email" />
                     </div>
                     <div className="mb-4 ">
-                        <textarea name="consulta" rows={10} cols={50} defaultChecked={"Escribi tu consulta aqui"}></textarea>
+                        <textarea name="consulta" rows={9} cols={68} placeholder="Escriba aqui su consulta..." className='text-area'></textarea>
                     </div>
-                    <button type="submit" className="btn btn-dark">Enviar</button>
+                    <button type="submit" className={darkMode ? "btnVerProductoDark" : "btnVerProducto"}>Enviar</button>
                 </form>
             </div>
 
-        </>
+        </div>
     );
 }
 

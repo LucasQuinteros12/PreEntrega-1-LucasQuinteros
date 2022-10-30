@@ -1,9 +1,11 @@
-import React, {memo} from 'react';
+import React, {memo, useContext} from 'react';
+import {DarkModeContext} from '../../context/darkModeContext';
 
 const Footer = () => {
+    const {darkMode} = useContext(DarkModeContext);
     return (
         <>
-            <footer className="text-center text-white">
+            <footer className={darkMode ? "footerDark text-center text-white" : "text-center text-white"}>
                 {/* Grid container */}
                 <div className="container p-4 pb-0">
                     {/* Section: Social media */}

@@ -1,14 +1,17 @@
 import React from 'react';
 import { useState, useContext } from 'react';
 import { CarritoContext } from '../../context/CarritoContext';
+import { DarkModeContext } from '../../context/darkModeContext';
 const ProductDetails = ({ producto }) => {
+    const { darkMode } = useContext(DarkModeContext);
+    
     const [cantidad, setCantidad] = useState(1);
 
-    const {agregarProducto} = useContext(CarritoContext);
+    const { agregarProducto } = useContext(CarritoContext);
 
     const cantProducto = (operation) => {
         if (operation === '+') {
-            if (cantidad < producto[1].stock) {
+            if (cantidad < producto.stock) {
                 setCantidad(cantidad + 1);
             }
         } else {
@@ -17,28 +20,26 @@ const ProductDetails = ({ producto }) => {
             }
         }
     }
-    
-    
 
-
-    
     return (
         <>
-            <div className='d-flex align-items-center justify-content-center h-100'>
-                <div className="cardDetails">
-                    <img src={producto[1].imagen} className="img-fluid rounded-start" alt={producto[1].nombre} />
+            <div className={darkMode ? 'cardContainerDark' : 'cardContainer'}>
+                <div className= "imageContainer" >
+                    <img src={producto.imagen} className="imgCardDetail"  alt={producto.nombre} />
                 </div>
                 <div className="detailContainer">
                     <div className="card-body">
-                        <p className="card-text cardName">{producto[1].nombre}</p>
-                        <h5 className="card-title">{producto[1].marca}</h5>
-                        <p className="card-text">Modelo: {producto[1].modelo}</p>
-                        <p className="card-text">Stock: {producto[1].stock}</p>
-                        <p className="card-text">Precio: ${producto[1].precio}</p>
-                        <button className='btn btnVerProducto' onClick={() => cantProducto("+")}>+</button>
-                        <p className='card-text'>{cantidad}</p>
-                        <button className='btn btnVerProducto' onClick={() => cantProducto("-")}>-</button>
-                        <button className='btn btnVerProducto' onClick={() => agregarProducto(producto, cantidad)}>Comprar Producto</button>
+                        <p className={darkMode ? "card-text cardNameDark" : "card-text cardName" }>{producto.marca}</p>
+                        <h5 className="card-title">{producto.nombre}</h5>
+                        <p className="card-text">Modelo: {producto.modelo}</p>
+                        <p className="card-text">Stock: {producto.stock}</p>
+                        <p className="card-text">${producto.precio}</p>
+                        <div className='counterContainer'>
+                            <button className={darkMode ? 'btnVerProductoDark counter' : 'btnVerProducto counter'} onClick={() => cantProducto("+")}>+</button>
+                            <p className='card-text'>{cantidad}</p>
+                            <button className={darkMode ? 'btnVerProductoDark counter' : 'btnVerProducto counter'} onClick={() => cantProducto("-")}>-</button>
+                        </div>
+                        <button className={darkMode ? 'btnVerProductoDark' : 'btnVerProducto'} onClick={() => agregarProducto(producto, cantidad)}>Comprar Producto</button>
                     </div>
                 </div>
             </div>
