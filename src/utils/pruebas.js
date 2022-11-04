@@ -27,10 +27,10 @@ const producto = {
     
 }) */
 
-/* createOrdenDeCompra(120000, "pepito", "perez", "pep@gmail.com", 3334213, "Av. Siempre Viva 123").then(orden => {
+/* createOrdenDeCompra("pepito", "perez", "pep@gmail.com", 3334213, "Av. Siempre Viva 123").then(orden => {
     console.log(orden);
     
-}) */
+})  */ 
 
 /* getOrdenCompra("64QgCMO5fuZX1jsMniHJ").then(orden =>{
     console.log(orden.id)

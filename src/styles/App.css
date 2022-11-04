@@ -10,184 +10,6 @@ body {
     transition: all 1s ease-out;
 }
 
-/* DarkMode */
-
-.darkMode {
-    background-color: grey;
-    color: #ffff;
-    transition: all 0.2s ease-in;
-    margin-bottom: -3rem;
-}
-
-.navDark{
-    height: 60px;
-    background-color: gray;
-    width: 100vw;
-    transition: all 0.2s ease-in;
-}
-
-
-.iconsDark{
-    color: #ffff;
-    cursor: pointer;
-    margin: 0 12px;
-    transition: all 0.2s ease-in;
-}
-
-.btnSectionsDark{
-    background-color: black;
-    padding: 10px 2px;
-    border-radius: 10px;
-    color: white;
-    border: none;
-    margin-left: 10px;
-    transition: all 0.2s ease-in;
-}
-
-.rightDark{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 20px;
-    margin-top: 20px;
-    transition: all 0.2s ease-in;
-}
-
-.btnCategoriesDark{
-    background-color: black;
-    padding: 18px 20px;
-    border-bottom: 1px solid #ffff;
-    color: white;
-    display: flex;
-}
-
-.btnCategoriesDark:hover{
-    background-color: black;
-    
-}
-
-.cardContainerDark{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 5em;
-    padding: 20px;
-    border: none;
-    background: black;
-    border-radius: 20px;
-    transition: all 0.2s ease-in;
-}
-
-.cardNameDark{
-    text-align: start;
-    font-weight: lighter;
-    color: white;
-    transition: all 0.2s ease-in;
-}
-
-.btnVerProductoDark{
-    border: none;
-    background-color: gray;
-    padding: 10px 12px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-weight: 600;
-    color: white;
-    transition: all 0.2s ease-in;
-}
-
-.btnVerProductoDark:hover{
-    background-color: white;
-    color: black;
-    transition: all 0.2s ease-in;
-}
-
-.cardDark{
-    background-color:gray;
-    height: 100vh;
-    width: 100vw;
-    margin-bottom: -3rem;
-    border: none;
-    border-radius: 0px;
-    transition: all .2s ease-in;
-}
-
-.footerDark{
-    margin-top: 3em;
-    width: 100vw;
-    box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
-    -webkit-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
-    -moz-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
-    background-color: gray;
-}
-
-.cardDarkHome{
-    margin: 10px auto;
-    margin-top: 5em;
-    padding: 20px;
-    border: none;
-    background: black;
-    border-radius: 20px;
-}
-
-.cardCartDark{
-    margin: 10px auto;
-    margin-top: 5em;
-    padding: 20px;
-    border: none;
-    background: black;
-    border-radius: 20px;
-    height: 500px;
-}
-
-.cartDark{
-    height: 100vh;
-}
-
-.btnVaciarCarritoDark {
-    background-color: black;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    padding: 20px 12px;
-    border-radius: 0 0 0 10px;
-    font-weight: 600;
-    color: white;
-    border: none;
-}
-
-.calcularTotalDark{
-    background-color: black;
-    position: absolute;
-    top: 60px;
-    width: 200px;
-    height: 50px;
-    border-radius: 0px 0px 10px 0px;
-}
-
-.contactContainerDark{
-    background-color: grey;
-    color: #ffff;
-    transition: all 0.2s ease-in;
-    margin-top: -4em;
-    margin-bottom: 10.4rem;
-}
-
-.containerFormDark{
-    margin-top: 4em;
-    margin-bottom: -10.4em;
-    height: 100vh;
-    background-color: black;
-    padding: 20px;
-    font-weight: bold;
-    color: white;
-    width: 600px;
-    border-radius: 20px;
-    border: none;
-}
 
 /* NavBar */
 
@@ -455,6 +277,30 @@ h5 {
     transition: all 0.3s;
 }
 
+.terminarCompraDark{
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    padding: 20px 12px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.btnVaciarCarritoDark:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+
+.terminarCompraDark:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+
 /* Form */
 
 .containerForm{
@@ -490,6 +336,216 @@ footer {
     background-color: #9381ff;
 }
 
-.succesContainer{
+/* Succes */
+
+.success{
+    font-weight: bold;
+    margin-top: 2em;
+    background-color: rgb(143, 229, 143);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.spanSuccess{
+    text-align: center;
+    font-weight: bold;
+}
+
+.successContainer{
     height: 100vh;
+}
+
+
+.successContainerDark{
+    height: 100vh;
+    background-color: grey;
+    margin-bottom: -3em;
+}
+
+.successDark{
+    font-weight: bold;
+    background-color: rgb(143, 229, 143);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* DarkMode */
+
+.darkMode {
+    background-color: grey;
+    color: #ffff;
+    transition: all 0.2s ease-in;
+    margin-bottom: -3rem;
+}
+
+.navDark{
+    height: 60px;
+    background-color: gray;
+    width: 100vw;
+    transition: all 0.2s ease-in;
+}
+
+
+.iconsDark{
+    color: #ffff;
+    cursor: pointer;
+    margin: 0 12px;
+    transition: all 0.2s ease-in;
+}
+
+.btnSectionsDark{
+    background-color: black;
+    padding: 10px 2px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.rightDark{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.btnCategoriesDark{
+    background-color: black;
+    padding: 18px 20px;
+    border-bottom: 1px solid #ffff;
+    color: white;
+    display: flex;
+}
+
+.btnCategoriesDark:hover{
+    background-color: black;
+    
+}
+
+.cardContainerDark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.cardNameDark{
+    text-align: start;
+    font-weight: lighter;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btnVerProductoDark{
+    border: none;
+    background-color: gray;
+    padding: 10px 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btnVerProductoDark:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.2s ease-in;
+}
+
+.cardDark{
+    background-color:gray;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: -3rem;
+    border: none;
+    border-radius: 0px;
+    transition: all .2s ease-in;
+}
+
+.footerDark{
+    margin-top: 3em;
+    width: 100vw;
+    box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: 0px -4px 181px -28px rgba(0, 0, 0, 0.76);
+    background-color: gray;
+}
+
+.cardDarkHome{
+    margin: 10px auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+}
+
+.cardCartDark{
+    margin: 10px auto;
+    margin-top: 5em;
+    padding: 20px;
+    border: none;
+    background: black;
+    border-radius: 20px;
+    height: 500px;
+}
+
+.cartDark{
+    height: 100vh;
+}
+
+.btnVaciarCarritoDark {
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 20px 12px;
+    border-radius: 0 0 0 10px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+
+.calcularTotalDark{
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+.contactContainerDark{
+    background-color: grey;
+    color: #ffff;
+    transition: all 0.2s ease-in;
+    margin-top: -4em;
+    margin-bottom: 10.4rem;
+}
+
+.containerFormDark{
+    margin-top: 4em;
+    margin-bottom: -10.4em;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    width: 600px;
+    border-radius: 20px;
+    border: none;
 }

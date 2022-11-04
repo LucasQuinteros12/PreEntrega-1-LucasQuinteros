@@ -12,7 +12,7 @@ import Footer from './components/content/Footer';
 import Categoria from './components/content/Categoria';
 import Fav from './components/content/Fav';
 import PreSucces from './components/content/PreSucces';
-import Succes from './components/content/Succes';
+import Success from './components/content/Success';
 
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
                         <Route path="/carrito" element={<Cart />}/>
                         <Route path="/favoritos" element={<Fav />}/>
                         <Route path="/preSucces" element={<PreSucces />}/>
-                        <Route path="/succes" element={<Succes />}/>
+                        <Route path="/success" element={<Success />}/>
                         <Route path="*" element={<h1> Error 404 </h1>}/>
                     </Routes>
                     <Footer />

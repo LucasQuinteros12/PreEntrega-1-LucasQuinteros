@@ -38,7 +38,7 @@ const Cart = () => {
 
     }, [carrito]);
     
-    const app = (carrito.length !== 0) ? <div className={darkMode ? 'darkMode Row cartDark' : 'Row cart'}> {carritoLocal} <div className={darkMode ? 'calcularTotalDark' : 'calcularTotal'}><h5 className='card-text'>Total: ${calcularTotal()}</h5></div> <div className='btnCarritoContainer'><button className={darkMode ? 'btnVaciarCarritoDark' : 'btnVaciarCarrito'} onClick={() => vaciarCarrito()}>Vaciar Carrito</button> <button className='terminarCompra'><Link className='nav-link' to={'/preSucces'}>Finalizar Compra</Link></button></div></div> : <div className='cartVacio'><h1 >Aun no tiene productos en el carrito.</h1> <p style={{fontSize:'50px'}}>&#128546;</p> </div> 
+    const app = (carrito.length !== 0) ? <div className={darkMode ? 'darkMode Row cartDark' : 'Row cart'}> {carritoLocal} <div className={darkMode ? 'calcularTotalDark' : 'calcularTotal'}><h5 className='card-text'>Total: ${calcularTotal()}</h5></div> <div className='btnCarritoContainer'><button className={darkMode ? 'btnVaciarCarritoDark' : 'btnVaciarCarrito'} onClick={() => vaciarCarrito()}>Vaciar Carrito</button> <button className={darkMode ? 'terminarCompraDark' : 'terminarCompra'}><Link className='nav-link' to={'/preSucces'}>Finalizar Compra</Link></button></div></div> : <div className='cartVacio'><h1 >Aun no tiene productos en el carrito.</h1> <p style={{fontSize:'50px'}}>&#128546;</p> </div> 
 
     return app
 }

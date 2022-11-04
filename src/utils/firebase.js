@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, addDoc, getFirestore, getDocs, getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { collection, addDoc, getFirestore, getDocs, getDoc, doc} from "firebase/firestore";
 
 
 // Your web app's Firebase configuration
@@ -46,28 +46,6 @@ const getProductos = async () => {
   return items;
 }
 
-const updateProducto = async (id, info) => {
-  const estado = await updateDoc(doc(db, "productos", id), info);
-  return estado;
-}
-
-const deleteProducto = async (id) => {
-  const estado = await deleteDoc(doc(db, "productos", id));
-  return estado;
-}
-
-const createProducto = async (objProd) => {
-  const estado = await addDoc(collection(db, "productos"), {
-    nombre: objProd.nombre,
-    marca: objProd.marca,
-    modelo: objProd.modelo,
-    precio: objProd.precio,
-    stock: objProd.stock,
-    imagen: objProd.img,
-    categoria: objProd.idCategoria
-  });
-}
-
 
 const createOrdenDeCompra = async (nombre, apellido, email, dni, direccion) => {
   const ordenCompra = await addDoc(collection(db, "ordenCompra"), {
@@ -79,11 +57,11 @@ const createOrdenDeCompra = async (nombre, apellido, email, dni, direccion) => {
   })
 
   return ordenCompra
-}
+}  
 
 const getOrdenCompra = async (id) =>{
   const ordenCompra = await getDoc(doc(db, "ordenCompra", id));
   return ordenCompra
-}
+} 
 
-export { cargarDB, getProductos, getProducto, updateProducto, deleteProducto, createProducto, createOrdenDeCompra, getOrdenCompra };
+export { cargarDB, getProductos, getProducto, createOrdenDeCompra, getOrdenCompra }; 

@@ -9,7 +9,7 @@ const Contact = () => {
         e.preventDefault();
         const datForm = new FormData(datosFormulario.current);
         console.log(Object.fromEntries(datForm));
-
+        e.target.reset();
     }
 
 

@@ -21,7 +21,7 @@ const Categoria = () => {
                             <p className="card-text">{producto.modelo}</p>
                             <p className="card-text">$ {producto.precio}</p>
                             <p className="card-text">Quedan {producto.stock}</p>
-                            <button className={darkMode ? 'btnVerProductoDark' : 'btnVerProducto'}><Link className='nav-link' to={"/producto/" + producto[0]}>Ver producto</Link></button>
+                            <button className={darkMode ? 'btnVerProductoDark' : 'btnVerProducto'}><Link className='nav-link' to={"/producto/" + producto.id}>Ver producto</Link></button>
                         </div>
                     </div>
                 </div>
